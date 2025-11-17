@@ -152,14 +152,14 @@ export default function About({
               </h4>
               <p className="text-gray-600 dark:text-gray-400">Bridging Tech • Summer 2025</p>
               <p className="mt-2">
-                Work on frontent gamification in React and Typescript.
+                Work on frontend gamification in React and Typescript.
               </p>
             </div>
             <div>
               <h4 className="font-semibold text-gray-900 dark:text-white">
                 Teaching Assistant
               </h4>
-              <p className="text-gray-600 dark:text-gray-400">Harvrd University • Summer 2025/ Boston University • Fall 2025</p>
+              <p className="text-gray-600 dark:text-gray-400">Harvard University • Summer 2025 / Boston University • Fall 2025</p>
               <p className="mt-2">
                 Teach discussion sections and host office hours in Java and Python.
               </p>
