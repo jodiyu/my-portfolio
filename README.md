@@ -1,36 +1,119 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# CS Portfolio
 
-## Getting Started
+A simple and elegant Computer Science portfolio website built with Next.js 16, React 19, and Tailwind CSS. Features a dynamic weather integration that changes the About page's background color based on current weather conditions.
 
-First, run the development server:
+## Features
+
+- **Header Navigation**: Clean header with your name and three tab navigation (About, Projects, Contact)
+- **About Section**: Short bio with relevant courses and experience
+- **Projects Section**: Clickable project cards with descriptions and technologies
+- **Contact Section**: Email, LinkedIn, and GitHub links
+- **Weather Integration**: Real-time weather display with dynamic background colors that change based on weather conditions
+
+## Weather Colors
+
+The About page background changes based on the current weather:
+- ☀️ **Clear**: Warm yellow-orange gradient
+- ☁️ **Clouds**: Cool gray gradient
+- 🌧️ **Rain**: Blue-indigo gradient
+- ⛈️ **Thunderstorm**: Purple-gray gradient
+- ❄️ **Snow**: Light blue-cyan gradient
+- 🌫️ **Fog/Mist**: Slate gray gradient
+- 🌤️ **Haze**: Amber-yellow gradient
+
+## Setup Instructions
+
+### 1. Install Dependencies
+
+```bash
+npm install
+```
+
+### 2. Get OpenWeather API Key
+
+1. Sign up for a free account at [OpenWeatherMap](https://openweathermap.org/api)
+2. Go to your [API keys section](https://home.openweathermap.org/api_keys)
+3. Generate a new API key (or copy your default key)
+
+### 3. Configure Environment Variables
+
+1. Copy the example environment file:
+```bash
+cp .env.local.example .env.local
+```
+
+2. Open `.env.local` and replace `your_api_key_here` with your actual OpenWeather API key:
+```
+NEXT_PUBLIC_OPENWEATHER_API_KEY=your_actual_api_key_here
+```
+
+### 4. Run the Development Server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser to see your portfolio.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Customization
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Personal Information
 
-## Learn More
+Edit the following files to add your information:
 
-To learn more about Next.js, take a look at the following resources:
+- **Name**: Update in `/app/components/Header.tsx`
+- **About Section**: Edit `/app/components/About/About.tsx`
+  - Update bio, courses, and experience
+- **Projects**: Edit `/app/components/Projects/Projects.tsx`
+  - Update project titles, descriptions, links, and technologies
+- **Contact**: Edit `/app/components/Contact/Contact.tsx`
+  - Update email, LinkedIn, and GitHub links
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Default City
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+To change the default city for weather display, edit line 8 in `/app/components/About/About.tsx`:
 
-## Deploy on Vercel
+```typescript
+const [city, setCity] = useState("Your City Here");
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Project Structure
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
+app/
+├── components/
+│   ├── Header.tsx          # Navigation header
+│   ├── About/
+│   │   └── About.tsx       # About section with weather
+│   ├── Projects/
+│   │   └── Projects.tsx    # Projects section
+│   └── Contact/
+│       └── Contact.tsx     # Contact section
+├── utils/
+│   └── weather.ts          # Weather API utilities
+├── globals.css
+├── layout.tsx
+└── page.tsx                # Main page
+```
+
+## Technologies Used
+
+- **Next.js 16** - React framework
+- **React 19** - UI library
+- **TypeScript** - Type safety
+- **Tailwind CSS 4** - Styling
+- **OpenWeather API** - Weather data
+
+## Deployment
+
+This project can be easily deployed to [Vercel](https://vercel.com):
+
+1. Push your code to GitHub
+2. Import your repository to Vercel
+3. Add your `NEXT_PUBLIC_OPENWEATHER_API_KEY` to the environment variables in Vercel
+4. Deploy!
+
+## License
+
+MIT
+
