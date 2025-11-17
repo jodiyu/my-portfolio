@@ -18,7 +18,7 @@ export default function Header({ activeTab, setActiveTab, overlayColor = "bg-gra
               className={`text-lg font-medium transition-colors ${
                 activeTab === "about"
                   ? "text-blue-600 dark:text-blue-400"
-                  : "text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
+                  : "text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:cursor-pointer"
               }`}
             >
               About
@@ -28,7 +28,7 @@ export default function Header({ activeTab, setActiveTab, overlayColor = "bg-gra
               className={`text-lg font-medium transition-colors ${
                 activeTab === "projects"
                   ? "text-blue-600 dark:text-blue-400"
-                  : "text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
+                  : "text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:cursor-pointer"
               }`}
             >
               My Work
@@ -38,7 +38,7 @@ export default function Header({ activeTab, setActiveTab, overlayColor = "bg-gra
               className={`text-lg font-medium transition-colors ${
                 activeTab === "contact"
                   ? "text-blue-600 dark:text-blue-400"
-                  : "text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
+                  : "text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:cursor-pointer"
               }`}
             >
               Contact
