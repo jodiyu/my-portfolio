@@ -23,7 +23,7 @@ export default function Contact({ containerColor = "bg-gray-100/30 dark:bg-gray-
               href="mailto:jodilinyu@gmail.com"
               className="text-blue-600 dark:text-blue-400 hover:underline"
             >
-              jodilinyu@gmail.com
+              jodiyu@bu.edu
             </a>
           </div>
         </div>
