@@ -1,4 +1,6 @@
-import { cn } from "@/lib/utils";
+"use client";
+import { cn } from "@/src/lib/utils";
+import { useState } from "react";
 
 interface MarqueeProps extends React.HTMLAttributes<HTMLDivElement> {
   /**
@@ -56,6 +58,8 @@ export default function Marquee({
   speed = "50s",
   ...props
 }: MarqueeProps) {
+  const [isHovered, setIsHovered] = useState(false);
+
   return (
     <div
       {...props}
@@ -71,26 +75,20 @@ export default function Marquee({
         ...props.style,
         "--duration": speed,
       } as React.CSSProperties}
+      onMouseEnter={() => pauseOnHover && setIsHovered(true)}
+      onMouseLeave={() => pauseOnHover && setIsHovered(false)}
     >
       {Array.from({ length: repeat }).map((_, index) => (
         <div
           key={`item-${index}`}
           className={cn("flex shrink-0 [gap:var(--gap)]", {
-            "group-hover:[animation-play-state:paused]": pauseOnHover,
             "[animation-direction:reverse]": reverse,
             "animate-marquee-horizontal flex-row": !vertical,
             "animate-marquee-vertical flex-col": vertical,
           })}
-            style={
-              pauseOnModal 
-                ? { animationPlayState: "paused" }
-                : !pauseOnHover 
-                  ? { animationPlayState: "running" } 
-                  : {} // Let CSS handle it when pauseOnHover is true
-            }
-          /* style={{
-            animationPlayState: pauseOnModal ? "paused" : pauseOnHover ? "running" : "running", // group-hover is a predefined Tailwind interaction, but for dynamic props it is better handled with inline style
-          }} */
+          style={{
+            animationPlayState: pauseOnModal || (pauseOnHover && isHovered) ? "paused" : "running",
+          }}
         >
           {children}
         </div>
