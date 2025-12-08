@@ -22,7 +22,7 @@ export default function RootLayout({
   return (
     <>
     <html lang="en" suppressHydrationWarning>
-      <body className={`${lato.className} antialiased min-h-screen bg-white text-gray-900 dark:bg-black dark:text-gray-100 transition-colors`}>
+      <body className={`${lato.className} antialiased min-h-screen bg-background text-foreground transition-colors`}>
         <ThemeProvider
             attribute="class"
             defaultTheme="system"
