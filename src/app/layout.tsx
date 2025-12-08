@@ -12,6 +12,9 @@ const lato = Lato({
 export const metadata: Metadata = {
   title: "CS Portfolio",
   description: "Computer Science Portfolio",
+  icons: {
+    icon: "/icon.png",
+  },
 };
 
 export default function RootLayout({

@@ -12,16 +12,16 @@ interface ProjectsProps {
 const other: Project[] = [
   {
     title: "SHA Student Wellbeing Competition",
-    short: "Won First Place and a $6K cash prize.",
-    description: "This competition focuses on innovative ideas or initiatives that promote the social wellbeing of students at Boston University. Won First Place and a $6K cash prize. See a video of our elevator pitch speech we gave.",
+    short: "Competed in a student innovation competition to promote social wellbeing on campus.",
+    description: "This competition focuses on innovative ideas or initiatives that promote the social wellbeing of students at Boston University. MissedConnections won First Place and a $6K cash prize. See a video of our elevator pitch speech we gave.",
     image: "/sha.jpg",
     link: "https://www.youtube.com/watch?v=kmtSS2ib24E&",
     button_text: "Visit page",
   },
   {
     title: "Spark! Demo Day",
-    short: "Won the Audience Choice Award.",
-    description: "The event showcases student-led innovation across real-world projects from the Faculty of Computing & Data Sciences. Won the Audience Choice Award during Demo Day. Linked is a description of Demo Day from BU Spark.",
+    short: "Showcased and demoed the MissedConnections app to students, faculty, staff, and Spark! partners as a part of the Spring 2025 Experiential Learning Expo.",
+    description: "The event showcases student-led innovation across real-world projects from the Faculty of Computing & Data Sciences. MissedConnections the Audience Choice Award during Demo Day. Linked is a description of Demo Day from BU Spark.",
     image: "/demo.jpg",
     link: "https://www.bu.edu/spark/2025/05/06/spring-awakening-innovation-take-center-stage-at-demo-day-spring-2025/",
     button_text: "Visit page",
@@ -39,8 +39,8 @@ const other: Project[] = [
 const projects: Project[] = [
   {
     title: "Missed Connections",
-    short: "A proximity-based social media app.",
-    description: "A full stack iOS proximity-based social media app that connects people who crossed paths but didn't get the chance to meet. Users can discover missed connections in their area and reach out to make meaningful connections.",
+    short: "An iOS app that connects you with people crossed paths with.",
+    description: "MissedConnections is an iOS app designed to help Boston University students expand their social circle by facilitating meaningful & lasting connections. The app uses location-based matching to connect you with like-minded individuals you missed during your day.",
     technologies: "React Native, Expo, TypeScript, Django REST Framework, PostgreSQL, AWS",
     link: "https://missedconnections.tech/",
     image: "/missed_co.png"
@@ -55,9 +55,9 @@ const projects: Project[] = [
   },
   {
     title: "Book Blog",
-    short: "Book blog with reviews and essays.",
-    description: "Book blog platform with book reviews and essays. A personal space to share literary thoughts, book recommendations, and in-depth analysis of favorite reads.",
-    technologies: "Next.js, React, TypeScript, Vercel, PostgresSQL, AWS, TailwindCSS",
+    short: "Book blog with reviews, recommendations, and essays.",
+    description: "Book blog platform with book reviews, recommendations, and essays. A personal space to share literary thoughts, book recommendations, and in-depth analysis of favorite reads.",
+    technologies: "Next.js, React, TypeScript, Vercel, PostgresSQL, AWS S3, TailwindCSS",
     link: "https://jodireads.blog/",
     image: "/book_blog.png"
   },
